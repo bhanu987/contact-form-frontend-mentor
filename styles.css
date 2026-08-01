@@ -97,18 +97,6 @@ input[type="email"]:invalid {
   border: 1px ridge #d73c3c;
 }
 
-/* input:invalid{
-    border: 1px ridge #d73c3c ;
-} */
-/* 
-input:valid{
-    border: 1px ridge #3a3d3e;
-}
-
-input:valid + .err-msg{
-    display: none;
-} */
-
 input[type="checkbox"] {
   width: 16px;
   height: 16px;
