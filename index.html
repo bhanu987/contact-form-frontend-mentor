@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="success-msg rounded">
+      <div class="d-flex align-items-center">
+  <img src="./assets/icon-success-check.svg" alt="success icon"/>&nbsp; &nbsp;
+      <span>Message Sent!</span>
+      </div>
+    
+      <p> Thanks for completing the form. We'll be in touch soon!</p>
+
+    </div>
+    <form class="rounded">
+      <h1>Contact Us</h1>
+      <div class="name-group d-flex">
+        <div class="first-name">
+          <label for="firstName">First Name <span>*</span></label><br/>
+          <input type="text" name="firstName" id="firstName" aria-invalid="true" aria-describedby="first-name" />
+          <span class="name-error first-name-error err-msg">This field is required.</span>
+        </div>
+        <div class="last-name">
+          <label for="lastName">Last Name <span>*</span></label><br/>
+          <input type="text" name="lastName" id="lastName" aria-invalid="true" aria-describedby="last-name-error"  />
+          <span class="name-error last-name-error err-msg">This field is required.</span>
+
+        </div>
+      </div>
+      <label for="email">Email  Address <span>*</span></label>
+      <div class="email-info">
+      <input type="email" name="email" id="email" aria-invalid="true" aria-describedby="email-error">
+        <span class="email-error email-empty err-msg">Please enter a valid email address</span>
+      </div>
+      <div >
+        <label for="query">Query Type <span>*</span></label>
+        <div class="d-flex query-type">
+             <div class="radio d-flex"><input type="radio" name="query"  aria-describedby="radio-error"  id="query">General Enquiry</div>
+        <div class="radio d-flex"><input type="radio" name="query" id="query" aria-describedby="radio-error">Support Request</div>
+        </div>
+ 
+        <span class="err-msg radio-error"> Please select a query type</span>
+       
+      </div>
+
+      <label for="message">Message <span>*</span></label><br/>
+      <textarea name="message" id="message" aria-invalid="true" aria-describedby="msg-error"></textarea><br/>
+      <span class="err-msg msg-error">
+          This field is required
+      </span>
+          <br>
+
+
+      <div class="d-flex align-items-center">
+         <input type="checkbox" name="consent" id="consent" aria-describedby="consent-error" aria-invalid="true"/>
+      <span class="consent-text">I consent to being contacted by the team <span>*</span></span>
+      </div>
+ 
+      <span class="err-msg consent-error"> To submit this form, please consent to being contacted</span>
+     
+
+      <br/>
+
+      <button type="submit">Submit</button>
+    </form>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
