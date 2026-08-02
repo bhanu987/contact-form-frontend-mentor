@@ -1,19 +1,14 @@
-const submitBtn = document.querySelector("button");
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const email = document.querySelector("#email");
 const msg = document.querySelector("#message");
 const consent = document.querySelector("#consent");
 const radioBtn = document.querySelectorAll("input[name='query']");
-console.log(radioBtn);
 
-submitBtn.addEventListener("click", (e) => {
+document.querySelector('form').addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (firstName.value === "") {
-    console.log("hello");
-
-    console.log();
     document.querySelector(".first-name-error").style.display = "block";
     firstName.style.border = "1px ridge #d73c3c";
   }
@@ -46,20 +41,12 @@ submitBtn.addEventListener("click", (e) => {
   if (
     firstName.value !== "" &&
     lastName.value !== "" &&
-    email.value !== "" &&
+    email.value !== "" && !email.validity.valid &&
     consent.checked &&
     msg.value !== "" &&
     isRadioSelected
   ) {
-
-   firstName.value = '',
-   lastName.value = '',
-   email.value='',
-   msg.value = '',
-   consent.checked = false;
-   radioBtn.forEach((option)=>{
-      option.checked = false
-   })
+document.querySelector('form').reset();
     document.querySelector(".success-msg").classList.add("show-success");
 
     setTimeout(() => {

@@ -6,6 +6,8 @@
 
 :root {
   --padding: 0.8rem;
+  --green-color: #0c7d69;
+  --error-color: #d73c3c;
 }
 
 .d-flex {
@@ -54,7 +56,7 @@ label {
 
 label > span,
 .consent-text span {
-  color: #0c7d69;
+  color: var(--green-color);
 }
 
 input[type="text"],
@@ -64,44 +66,41 @@ textarea {
   border-radius: 6px;
   border: 1px ridge gray;
   width: 100%;
-  outline: none;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  border: 1px ridge #0c7d69;
+  outline: 1px ridge var(--green-color);
 }
 
 input:hover,
 textarea:hover {
-  border: 1px ridge #0c7d69;
+  border: 1px ridge var(--green-color);
   cursor: pointer;
 }
 
-/* .email-error{
-    display: none;
-} */
-
 .err-msg {
-  color: #d73c3c;
+  color: var(--error-color);
   font-size: 13px;
   display: none;
 }
-
+fieldset{
+  border: none;
+}
 input[type="email"]:invalid + .email-error {
   display: block;
 }
 
 input[type="email"]:invalid {
-  border: 1px ridge #d73c3c;
+  border: 1px ridge var(--error-color);
 }
 
 input[type="checkbox"] {
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  accent-color: #0c7d69;
+  accent-color: var(--green-color);
 }
 
 .name-group {
@@ -130,12 +129,12 @@ input[type="checkbox"] {
 input[type="radio"] {
   transform: scale(1.5); /* 1.5 times bigger */
   margin-right: 8px; /* spacing between button and label */
-  accent-color: #0c7d69;
+  accent-color: var(--green-color);
 }
 
 .radio:has(input[type="radio"]:checked) {
   background-color: #e0f1e7;
-  border: 1px ridge #0c7d69;
+  border: 1px ridge var(--green-color);
 }
 
 textarea {
@@ -144,14 +143,14 @@ textarea {
 
 button {
   width: 100%;
-  background-color: #0c7d69;
+  background-color: var(--green-color);
   border: none;
   color: #ffffff;
   border-radius: 6px;
   padding: var(--padding);
   margin-top: 1rem;
   font-family: "Karla", sans-serif;
-  font-weight: semibold;
+  font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: all ease 0.1s;
@@ -166,14 +165,14 @@ button:hover{
   padding: 1rem;
   color: #ffffff;
   position: absolute;
-  top: -105px;
-  transition: all ease-in 0.1s;
+  transform:  translateY(-30rem);
+  transition: transform ease-in 0.2s;
 }
 
 .show-success{
-
-top: 8px;
+transform: translateY(-18rem);
 }
+
 .success-msg p{
     margin-top: 0.5rem;
 }
