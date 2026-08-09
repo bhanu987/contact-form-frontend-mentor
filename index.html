@@ -26,23 +26,23 @@
   </div>
   <form class="rounded">
     <h1>Contact Us</h1>
-    <div class="name-group d-flex">
+    <div class="d-flex name-group">
       <div class="first-name">
         <label for="firstName">First Name <span>*</span></label><br />
-        <input type="text" name="firstName" id="firstName" aria-describedby="first-name-error" />
-        <span class="first-name-error err-msg">This field is required.</span>
+        <input type="text" name="firstName" id="firstName" aria-describedby="first-name-error"/>
+        <span class="err-msg" id="first-name-error"></span>
       </div>
       <div class="last-name">
         <label for="lastName">Last Name <span>*</span></label><br />
         <input type="text" name="lastName" id="lastName" aria-describedby="last-name-error" />
-        <span class="last-name-error err-msg">This field is required.</span>
+        <span class="err-msg" id="last-name-error"></span>
 
       </div>
     </div>
     <label for="email">Email Address <span>*</span></label>
     <div class="email-info">
       <input type="email" name="email" id="email" aria-describedby="email-error">
-      <span class="email-error email-empty err-msg">Please enter a valid email address</span>
+      <span id="email-error" class="err-msg"></span>
     </div>
     <br>
     <fieldset>
@@ -54,14 +54,13 @@
             aria-describedby="radio-error">Support Request</label>
       </div>
 
-      <span class="err-msg radio-error"> Please select a query type</span>
+      <span class="err-msg" id="radio-error"></span>
 
     </fieldset>
 
     <label for="message">Message <span>*</span></label><br />
     <textarea name="message" id="message" aria-describedby="msg-error"></textarea><br />
-    <span class="err-msg msg-error">
-      This field is required
+    <span class="err-msg" id="msg-error">
     </span>
     <br>
 
@@ -71,7 +70,7 @@
       <label for="consent" class="consent-text">I consent to being contacted by the team <span>*</span></label>
     </div>
 
-    <span class="err-msg consent-error"> To submit this form, please consent to being contacted</span>
+    <span class="err-msg" id="consent-error"></span>
 
     <br />
 

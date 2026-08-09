@@ -74,26 +74,9 @@ textarea:focus {
   outline: 1px ridge var(--green-color);
 }
 
-input:hover,
-textarea:hover {
-  border: 1px ridge var(--green-color);
-  cursor: pointer;
-}
 
-.err-msg {
-  color: var(--error-color);
-  font-size: 13px;
-  display: none;
-}
 fieldset{
   border: none;
-}
-input[type="email"]:invalid + .email-error {
-  display: block;
-}
-
-input[type="email"]:invalid {
-  border: 1px ridge var(--error-color);
 }
 
 input[type="checkbox"] {
@@ -164,18 +147,31 @@ button:hover{
   background-color: #2b4246;
   padding: 1rem;
   color: #ffffff;
+  display: none;
   position: absolute;
   transform:  translateY(-30rem);
   transition: transform ease-in 0.2s;
 }
 
 .show-success{
+  display: block;
 transform: translateY(-18rem);
 }
 
 .success-msg p{
     margin-top: 0.5rem;
 }
+
+
+/* #firstName:invalid {
+border-color: 1px ridge #d73c3c;
+} */
+
+.err-msg{
+  color:#d73c3c;
+}
+
+
 
 @media screen  and (width <= 576px) {
     .name-group, .query-type{
